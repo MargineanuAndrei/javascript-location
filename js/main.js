@@ -1,10 +1,19 @@
+// Function to build map
 const initMap = (lat, lng) => {
+  // Option for map
   const options = {
     zoom: 7,
-    center: {lat: lat, lng: lng}
+    center: {lat, lng}
   }
 
+  // Create map
   const map = new google.maps.Map(document.getElementById('map'), options);
+
+  // Add a marker on map
+  const marker = new google.maps.Marker({
+    position:{lat, lng},
+    map
+  });
 }
 
 const geocode = (e) => {
