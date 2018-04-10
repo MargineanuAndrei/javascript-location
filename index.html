@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Maps App</title>
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- Axios cdn -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    
+
     <!-- Bootstrap cdn -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,13 +25,23 @@
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
       </form>
 
-      <!-- divs to output result -->
-      <div class="card-body" id="formatted-address"></div>
-      <div class="card-body" id="address-components"></div>
-      <div class="card-body" id="geometry"></div>
+      <div class="row">
+        <div class="col">
+          <!-- divs to output result -->
+          <div class="card-body" id="formatted-address"></div>
+          <div class="card-body" id="address-components"></div>
+          <div class="card-body" id="geometry"></div>
+        </div>
+        <div class="col">
+          <div id="map"></div>
+        </div>
+      </div>
 
     </div>
 
     <script src="js/main.js"></script>
+    <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-9JpGO7jLtzGw-KdWBvYy-KHZz9MnqYQ">
+   </script>
   </body>
 </html>

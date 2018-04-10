@@ -1,3 +1,12 @@
+const initMap = (lat, lng) => {
+  const options = {
+    zoom: 7,
+    center: {lat: lat, lng: lng}
+  }
+
+  const map = new google.maps.Map(document.getElementById('map'), options);
+}
+
 const geocode = (e) => {
   // Prevent page from reloading
   e.preventDefault();
@@ -38,7 +47,7 @@ const geocode = (e) => {
 
     // Format and output location geometry lat and lng
     const lat = response.data.results[0].geometry.location.lat;
-    const lng = response.data.results[0].geometry.location.lat;
+    const lng = response.data.results[0].geometry.location.lng;
     const geometryOutput = `
       <ul class="list-group">
         <li class="list-group-item"><strong>Latitude:</strong> ${lat}</li>
@@ -46,6 +55,9 @@ const geocode = (e) => {
       </ul>`;
     document.getElementById("geometry").innerHTML = geometryOutput;
     // -----
+
+    // Init google map
+    initMap(lat, lng);
   })
   .catch((error) => {
     console.log(error);
