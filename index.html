@@ -10,7 +10,17 @@
     crossorigin="anonymous">
   </head>
   <body>
-    <div id="formatted-address"></div>
+    <div class="container">
+      <h3 id="text-center">Enter Location:</h3>
+      <form id="location-form">
+        <input id="location-input" type="text" class="form-control form-control-lg">
+        <br />
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+      <div class="card-body" id="formatted-address"></div>
+      <div class="card-body" id="address-components"></div>
+      <div class="card-body" id="geometry"></div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>
