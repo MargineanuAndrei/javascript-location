@@ -7,7 +7,13 @@ const geocode = () => {
     }
   })
   .then((response)=> {
-    console.log(response);
+    const formatedAddress = response.data.results[0].formatted_address;
+    const formattedAdressOutput = `
+      <ul class="list-group">
+        <li class="list-group-item">${formatedAddress}</li>
+      </ul>
+    `;
+    document.getElementById("formatted-address").innerHTML = formattedAdressOutput;
   })
   .catch((error) => {
     console.log(error);
