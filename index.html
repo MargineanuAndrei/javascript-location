@@ -3,24 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Maps App</title>
+
+    <!-- Axios cdn -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+    <!-- Bootstrap cdn -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
+
   </head>
   <body>
     <div class="container">
+      <!-- From to get location -->
       <h3 id="text-center">Enter Location:</h3>
       <form id="location-form">
         <input id="location-input" type="text" class="form-control form-control-lg">
         <br />
         <button type="submit" class="btn btn-primary btn-block">Submit</button>
       </form>
+
+      <!-- divs to output result -->
       <div class="card-body" id="formatted-address"></div>
       <div class="card-body" id="address-components"></div>
       <div class="card-body" id="geometry"></div>
+
     </div>
+
     <script src="js/main.js"></script>
   </body>
 </html>
